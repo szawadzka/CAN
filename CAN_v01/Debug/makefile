@@ -61,8 +61,8 @@ all: main-build
 main-build: CAN_v01.elf secondary-outputs
 
 # Tool invocations
-CAN_v01.elf: $(OBJS) $(USER_OBJS) C:\PROGRAMY\ST\STM32CubeIDE_1.7.0\STM32CubeIDE\STM32CubeIDE\workspace_1.7.0\CAN_v01\STM32F767ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "CAN_v01.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\PROGRAMY\ST\STM32CubeIDE_1.7.0\STM32CubeIDE\STM32CubeIDE\workspace_1.7.0\CAN_v01\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CAN_v01.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+CAN_v01.elf: $(OBJS) $(USER_OBJS) C:\PROGRAMY\ST\STM32CubeIDE_1.7.0\STM32CubeIDE\STM32CubeIDE\workspace_1.7.0\repozytorium\CAN_v01\STM32F767ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "CAN_v01.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\PROGRAMY\ST\STM32CubeIDE_1.7.0\STM32CubeIDE\STM32CubeIDE\workspace_1.7.0\repozytorium\CAN_v01\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CAN_v01.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
